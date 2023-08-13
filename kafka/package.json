@@ -4,6 +4,7 @@
   "description": "",
   "main": "src",
   "scripts": {
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/topic.js\"",
     "publisher": "concurrently \"npx tsc --watch\" \"nodemon -q dist/publisher.js\"",
     "consumer": "concurrently \"npx tsc --watch\" \"nodemon -q dist/consumer.js\""
   },
@@ -11,8 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20.4.10",
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/kafkajs": "^1.9.0",
+    "kafkajs": "^2.2.4"
   }
 }
