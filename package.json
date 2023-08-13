@@ -2,17 +2,20 @@
   "name": "rabbitmq",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "src",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "start": "node dist/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+    "publisher": "concurrently \"npx tsc --watch\" \"nodemon -q dist/publisher.js\"",
+    "consumer": "concurrently \"npx tsc --watch\" \"nodemon -q dist/consumer.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.10.1",
+    "amqplib": "^0.10.3"
   }
 }
