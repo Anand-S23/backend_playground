@@ -1,4 +1,3 @@
-# RabbitMQ and Apache Kafka Exploration
+# Backend Playground
 
-Messing around with RabbitMQ and Apache Kafka, with simple test program
-
+Messing around different techonologies to get a better understanding of web and backend engineering concepts
